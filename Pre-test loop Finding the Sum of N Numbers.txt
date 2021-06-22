@@ -1,0 +1,36 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Write a Java program that lets the user enter N numbers 
+     * and then calculates and displays their sum. 
+     * The value of N must be given by the user at the beginning of the program.
+     */
+    
+    int i, n;
+    double x, total;
+    
+    System.out.print("How many numbers would you like to calculate? ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    i = 0;
+    total = 0;
+    
+    while (i < n) {
+      System.out.print("Enter a number: ");
+      x = Double.parseDouble(cin.nextLine());
+      total += x;
+      i++;
+    }
+    System.out.println(total);
+  
+ }
+}
+
