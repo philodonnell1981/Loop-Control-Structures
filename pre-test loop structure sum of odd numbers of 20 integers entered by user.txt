@@ -1,0 +1,33 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Design a flowchart and write the corresponding Java program that 
+     * lets the user enter 20 integers, and then calculates and displays 
+     * the sum of the odd numbers.
+     */
+    
+    int i, x, t;
+    
+    i = 0;
+    t = 0;
+    
+    while(i < 20) {
+      x = Integer.parseInt(cin.nextLine());
+      if (i % 2 == 1) {
+        t += x;
+      }
+      i++;
+    }
+    System.out.println(t);
+  
+ }
+}
+
