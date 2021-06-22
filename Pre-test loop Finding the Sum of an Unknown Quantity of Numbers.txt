@@ -1,0 +1,31 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Write a Java program that lets the user enter integer values repeatedly 
+     * until the value minus 1 is entered. 
+     * When data input is completed, the sum of the numbers entered must be displayed. 
+     * (The value of minus 1 must not be included in the final sum). 
+     */
+    
+    int x, total = 0;
+      
+    System.out.print("Enter a number: ");
+    x = Integer.parseInt(cin.nextLine());
+    while (x != -1) {
+      total += x;
+      System.out.print("Enter a number: ");
+      x = Integer.parseInt(cin.nextLine());
+      }
+    System.out.println(total);
+    
+  
+ }
+}
