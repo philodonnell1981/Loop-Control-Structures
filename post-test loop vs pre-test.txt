@@ -1,0 +1,87 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Write a Java program that lets the user enter N numbers and then 
+     * calculates and displays their product. 
+     * The value of N must be given by the user at the beginning of the program. 
+     * What happens if you switch the post-test loop structure with a pre-test loop structure? 
+     * Do both programs operate exactly the same way for all possible input values of N?
+     */
+    
+    int n, i;
+    double x, total;
+    
+    System.out.print("Number of calculations: ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    i = 0;    
+    total = 1;
+    
+    do {
+      System.out.print("Enter a number: ");
+      x = Double.parseDouble(cin.nextLine());
+      i++;
+      total *= x;
+    } while (i < n);
+    
+    System.out.println(total);
+   
+   
+//    post-test will iterate at least once so not accurate if user inputs 0.  Pre-test best to use in this instance
+  
+ }
+}
+
+**************************************************************************************************************************
+pre-test loop:
+
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Write a Java program that lets the user enter N numbers and then 
+     * calculates and displays their product. 
+     * The value of N must be given by the user at the beginning of the program. 
+     * What happens if you switch the post-test loop structure with a pre-test loop structure? 
+     * Do both programs operate exactly the same way for all possible input values of N?
+     */
+    
+    int n, i;
+    double x, total;
+    
+    total = 1;
+    i = 0;
+    
+    System.out.print("Number of calculations: ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    while (i < n) {
+      System.out.print("Enter a number: ");
+      x = Double.parseDouble(cin.nextLine());
+      total *= x;
+      i++;
+    }
+    
+    System.out.println(total);
+   
+   
+    
+  
+ }
+}
+
