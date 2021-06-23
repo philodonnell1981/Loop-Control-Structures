@@ -1,0 +1,40 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Using a pre-test loop structure, write a Java program that lets 
+     * the user enter 100 integers and then calculates and displays the 
+     * sum of those with a last digit of 0. 
+     * For example, the values 10, 2130, and 500 are such numbers.
+     */
+    
+    int i, x, total;
+    int count = 0;
+    
+    i = 0;
+    total = 0;
+    while(i < 100) {
+      x = Integer.parseInt(cin.nextLine());
+      if (x % 10 == 0) {
+        total += x;
+        count++;
+      }
+      i++;
+    }
+    if (count > 0) {
+      System.out.print(total);
+    }
+    else {
+      System.out.print("No integers with a last digit of '0' entered");
+    }
+    
+    
+ }
+}
