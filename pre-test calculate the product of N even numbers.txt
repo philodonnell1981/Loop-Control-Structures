@@ -1,0 +1,42 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Using a pre-test loop structure, write a Java program that lets the user enter 
+     * N integers and then calculates and displays the product of those that are even. 
+     * The value of N must be given by the user at the beginning of the program.
+     */
+    
+    int i, n, x, total;
+    
+    System.out.println("How many caluclations would you like to perform? ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    i = 0;
+    total = 1;
+    
+    while (i < n) {
+      System.out.print("Enter an integer number: ");
+      x = Integer.parseInt(cin.nextLine());
+      if (x % 2 == 0) {
+        total *= x;
+        // solution had a variable "count" that incremented after each even calculation that displayed a message if no even numbers were entered by the end of the program
+      }
+      i++;
+    }
+    if (n > 0) {
+      System.out.print(total);
+    }
+    else {
+      System.out.println("Invalid entry");
+    }
+    
+ }
+}
