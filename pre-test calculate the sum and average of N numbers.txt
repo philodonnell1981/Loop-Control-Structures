@@ -1,0 +1,43 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+
+    /*
+     * Using a pre-test loop structure, write a Java program that lets the user 
+     * enter N numbers and then calculates and displays their sum and their average. 
+     * The value of N must be given by the user at the beginning of the program.  
+     */
+    
+    int i, n;
+    double x, total, average;
+    
+    System.out.println("How many numbers to calculate? ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    i = 0;
+    total = 0;
+    while (i < n) {
+      System.out.println("Enter a number: ");
+      x = Double.parseDouble(cin.nextLine());
+      total += x;
+      i++;
+    }
+    average = total / n;
+    
+    System.out.println("Total: " + total);
+    System.out.println("Average: " + average);
+    
+    /* only part my answer differed to the solution was to only calculate the average if n was more than 0
+     * if (n > 0) {
+       System.out.println(total / n);
+     */
+  
+ }
+}
+
