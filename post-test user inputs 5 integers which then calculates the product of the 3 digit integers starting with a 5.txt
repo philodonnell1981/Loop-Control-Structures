@@ -1,0 +1,36 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Using a post-test loop structure, write a Java program that 
+     * prompts the user to enter five integers and then calculates 
+     * and displays the product of all three-digit integers with a 
+     * first digit of 5. For example, the values 512, 555, and 593 
+     * are all such numbers
+     */
+    
+    int i, x, p;
+    
+    i = 0;
+    p = 1;
+    do {
+      System.out.print("Enter an integer");
+      x = Integer.parseInt(cin.nextLine());
+      if (x >= 100 && x <= 999) { // solution given was if (x >=500 && x <= 599) which would save 1 line of code below
+        if (x / (int) 100 == 5) {
+          p *= x;
+        }
+      }
+      i++;
+    } while (i < 5);
+    
+    System.out.println(p);
+ }
+}
