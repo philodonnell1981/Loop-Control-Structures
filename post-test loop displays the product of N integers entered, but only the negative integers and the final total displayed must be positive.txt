@@ -1,0 +1,40 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Using a post-test loop structure, write a Java program that lets the 
+     * user enter N integers and then calculates and displays the product of 
+     * those that are negative. The value of N must be given by the user at the 
+     * beginning of the program, and the final product must always be displayed as a 
+     * positive value. Assume that the user enters a value greater than 0 for N.
+     */
+    
+    int i, n, x, p;
+    
+    System.out.println("Enter a number: ");
+    n = Integer.parseInt(cin.nextLine());
+    
+    i = 0;
+    p = 1;
+    
+    do {
+      System.out.println("Enter a number: ");
+      x = Integer.parseInt(cin.nextLine());
+      if (x < 0) {
+        p *= x;
+      }
+      i++;
+    } while(i < n);
+    
+    System.out.println(Math.abs(p));
+    
+ }
+}
+
