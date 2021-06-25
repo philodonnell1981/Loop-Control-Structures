@@ -1,0 +1,38 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Using a post-test loop structure, design a flowchart and write the corresponding Java program 
+     * that lets the user enter 50 integers and then calculates and displays the sum of those that are 
+     * odd and the sum of those that are even. 
+     */
+    
+    int i, x, sumOdd = 0, sumEven = 0;
+    
+    i = 0;
+    
+    do {
+      x = Integer.parseInt(cin.nextLine());
+      if (x % 2 == 0) {
+        sumEven += x;
+      }
+      else {
+        sumOdd += x;
+      }
+      i++;
+    } while (x < 50);
+
+    System.out.println(sumOdd);
+    System.out.println(sumEven);
+
+    
+ }
+}
+
