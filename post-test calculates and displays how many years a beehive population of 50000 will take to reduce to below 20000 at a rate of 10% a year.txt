@@ -1,0 +1,35 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * The population of a beehive is now at 50000, but due to environmental reasons it is 
+     * contracting at a rate of 10% per year. 
+     * Using a post-test loop structure, write a Java program to determine how many years it 
+     * will take for the population to be less than 20000.
+     */
+    
+    int years;
+    double p;
+    
+    p = 50000;
+    years = 0;
+    
+    do {
+      p -= p * 0.10;
+      years++;
+    } while (p >= 20000);
+    
+    System.out.println(years + " years until the population is less than 20000 if the population declines at 10% a year");
+     
+      
+      
+ }
+}
+
