@@ -1,0 +1,39 @@
+package testingProject;
+
+import java.util.*;
+
+public class MainClass {
+  
+  static Scanner cin = new Scanner (System.in);
+
+  public static void main(String[] args) {
+    
+    /*
+     * Using a pre-test loop structure, write a Java program that lets the 
+     * user enter numeric values repeatedly until the value 0 is entered. 
+     * When data input is completed, the product of the numbers entered must be displayed. 
+     * (The last 0 entered must not be included in the final product). 
+     */
+    
+    double x, p;
+    
+    x = Double.parseDouble(cin.nextLine());
+    if (x == 0) {
+      System.out.println("0");
+    }
+    else {
+      p = 1;
+      while (x != 0) {
+        p *= x;
+        x = Double.parseDouble(cin.nextLine());
+      }
+      
+      System.out.println(p);
+    }
+    
+   
+
+
+    
+ }
+}
